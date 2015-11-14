@@ -11,7 +11,7 @@ unzip apktool-files.zip -d apktool-files
 unzip jd-cli-0.9.1.Final-dist.zip -d jd-cli-0.9.1.Final-dist
 unzip dex2jar-2.0.zip
 
-
+rem call .\apktool-files\apktool.bat if framework-res.apk
 call .\apktool-files\apktool.bat d %APKFILE% -o %PROJECTFOLDER%
 rmdir /Q /S %PROJECTFOLDER%\original
 rmdir /Q /S %PROJECTFOLDER%\smali
@@ -33,3 +33,8 @@ rmdir /Q /S apktool-files
 rmdir /Q /S dex2jar-2.0
 rmdir /Q /S jd-cli-0.9.1.Final-dist
 del /Q /S classes.jar
+
+
+rem	**************************************REPACKAHE*******************************************
+
+rem call .\apktool-files\apktool.bat b AppFolder
